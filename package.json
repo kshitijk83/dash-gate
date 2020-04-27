@@ -1,0 +1,23 @@
+{
+  "name": "dash-gate",
+  "version": "1.0.0",
+  "description": "Gate entry management app",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier \"{front, back}/src/**/*.{js, html}\" --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kshitijk83/dash-gate.git"
+  },
+  "author": "kshitij kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kshitijk83/dash-gate/issues"
+  },
+  "homepage": "https://github.com/kshitijk83/dash-gate#readme",
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  }
+}
