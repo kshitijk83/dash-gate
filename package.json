@@ -4,8 +4,13 @@
   "description": "Gate entry management app",
   "main": "index.js",
   "scripts": {
-    "format": "prettier \"{front, back}/src/**/*.{js, html}\" --write",
+    "format": "prettier \"{front, back}/src/**/*.{tsx,js,html}\" --write",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format"
+    }
   },
   "repository": {
     "type": "git",
@@ -18,6 +23,7 @@
   },
   "homepage": "https://github.com/kshitijk83/dash-gate#readme",
   "devDependencies": {
+    "husky": "^4.2.5",
     "prettier": "^2.0.5"
   }
 }
