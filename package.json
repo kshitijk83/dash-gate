@@ -1,29 +1,60 @@
 {
-  "name": "dash-gate",
-  "version": "1.0.0",
-  "description": "Gate entry management app",
-  "main": "index.js",
-  "scripts": {
-    "format": "prettier \"{front, back}/src/**/*.{tsx,js,html}\" --write",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run format"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kshitijk83/dash-gate.git"
-  },
-  "author": "kshitij kumar",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kshitijk83/dash-gate/issues"
-  },
-  "homepage": "https://github.com/kshitijk83/dash-gate#readme",
-  "devDependencies": {
-    "husky": "^4.2.5",
-    "prettier": "^2.0.5"
-  }
+    "name": "dash-gate",
+    "version": "1.0.0",
+    "description": "Gate entry management app",
+    "main": "index.js",
+    "scripts": {
+        "format": "prettier \"{front, back}/src/**/*.{tsx,js,html}\" --write",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run format"
+        }
+    },
+    "lint-staged": {
+        "linters": {
+            "src/**/*.{js,css}": [
+                "prettier --write",
+                "git add"
+            ],
+            "webpack.config.js": [
+                "prettier --write",
+                "git add"
+            ],
+            "package.json": [
+                "prettier --write",
+                "git add"
+            ],
+            "*.md": [
+                "prettier --write",
+                "git add"
+            ]
+        },
+        "ignore": [
+            "node_modules",
+            "dist",
+            "package-lock.json"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kshitijk83/dash-gate.git"
+    },
+    "author": "kshitij kumar",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kshitijk83/dash-gate/issues"
+    },
+    "homepage": "https://github.com/kshitijk83/dash-gate#readme",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^2.29.0",
+        "@typescript-eslint/parser": "^2.29.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-react": "^7.19.0",
+        "husky": "^4.2.5",
+        "prettier": "^2.0.5"
+    },
+    "dependencies": {}
 }
