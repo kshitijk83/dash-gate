@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
+import Demo from './components/Demo'
 
 function App() {
-  console.log('sadf');
-  return <div className="App">asdfasdfasdfasd</div>;
+    return <Demo />
 }
 
-export default App;
+export default App
