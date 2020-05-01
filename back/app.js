@@ -8,6 +8,6 @@ app.get('/', function (req, res, next) {
     })
 })
 
-app.listen(process.env.SERVER_PORT | 4000, () => {
-    console.log(`server started on port ${process.env.SERVER_PORT}`)
+app.listen(8080, () => {
+    console.log(`server started on port 8080`)
 })

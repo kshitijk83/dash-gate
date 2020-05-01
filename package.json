@@ -4,6 +4,7 @@
     "description": "Gate entry management app",
     "main": "index.js",
     "scripts": {
+        "postinstall": "npm install --prefix back",
         "format": "prettier \"{front,back}/src/**/*.{tsx,js,html}\" --write",
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "as-a DEV npm run dev:core --silent",

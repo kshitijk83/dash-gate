@@ -1,1 +1,1 @@
-web: node back/app.js
+web: npm start --prefix back
