@@ -15,7 +15,9 @@ script:
     - npm run setup
 deploy:
     provider: heroku
-    skip_cleanup: true
+    api_key:
+        secure: GErjBf85TAkr1eYuWfaXQIylUa3xZKQfUwzHkV5ZdmP5GcB8/Yu+eGY18/IprF8Yz16He1w3dIB70jnDvZcA+zJcRK3/4mEG4xWS2WEJhwNqEJySbG3Eu7BmcbExwc1lnSAvQzSmCu5w2RM+zjtgkLoMXkSINOU/Qanvh91Bhyuey1E0/pLqcTMHjKpCcxF/2oThlUf/Y5m/wZA1orItBWW7MXLK3/57HNWszYC6CujEuwVy5PyjbZCjaXVM8tMxwHCzRhqeFjwLdyFMhIA1jQwJLE0tE01J4TO2NNBeDjqi8/IYB+F8d+C1rOXkdcjasq3yjUE+hwfL8bWQDDSpOpACIxsz6EYa7bLV7k/89HhV91jzUYq3AVj91hWJqkFKfwZtk4jlmlaZeOXvqjLPabDXYCND6Bozq4tgPRbo42P+qjRtrgf1qnGO32jF2TLnil/VgtlkTKV8ojN4vxBjS7Na1jjocElL7yfXAToTstXpEYAqv262v8vUHk8PebYLPFMxBRsV+bJh9v1lHdmW7xmT+f4yiKlPhLaYCaXDaHQX4lfO4gkqEZqLtfU+ywzUAZTNcjp55uvbFttjXp9CZM819v74bPRLLOgEC2FFRdPunmuoHEPLiP5vM9q4OINZ7RA86rHVNRijMB1iy1C2ZqRRwPeBAuhBxoX7suB4EC0=
+    app: dash-gate
 on:
     repo: kshitijk83/dash-gate
     branch: master
