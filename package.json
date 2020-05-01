@@ -4,7 +4,7 @@
     "description": "Gate entry management app",
     "main": "index.js",
     "scripts": {
-        "format": "prettier \"{front, back}/src/**/*.{tsx,js,html}\" --write",
+        "format": "prettier \"{front,back}/src/**/*.{tsx,js,html}\" --write",
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "as-a DEV npm run dev:core --silent",
         "dev:core": "concurrently --names \"front, back\" --prefix \"[{name}]\" --prefix-colors \"bgCyan.reset.bold,bgGreen.reset.bold\" \"npm run dev:front --silent\" \"npm run dev:back --silent\"",
