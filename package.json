@@ -7,10 +7,15 @@
         "format": "prettier \"{front, back}/src/**/*.{tsx,js,html}\" --write",
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "as-a DEV npm run dev:core --silent",
-        "dev:core": "concurrently --names \"front,back\" --prefix \"[{name}]\" --prefix-colors \"bgCyan.reset.bold,bgGreen.reset.bold\" \"npm run dev:front --silent\" \"npm run dev:back --silent\"",
-        "dev:front": "cd front&&npm start",
-        "dev:back": "cd back&&npm start",
-        "build:client": "cd front&&npm run build"
+        "dev:core": "concurrently --names \"front, back\" --prefix \"[{name}]\" --prefix-colors \"bgCyan.reset.bold,bgGreen.reset.bold\" \"npm run dev:front --silent\" \"npm run dev:back --silent\"",
+        "dev:front": "cd front&&npm start --silent",
+        "dev:back": "cd back&&npm start --silent",
+        "build:client": "cd front&&npm run build",
+        "clean": "rimraf node_modules front/node_modules back/node_modules",
+        "setup:front": "cd front&&npm i",
+        "setup:back": "cd back&&npm i",
+        "setup:root": "npm i",
+        "setup": "npm i --save concurrently@3.5.1&&concurrently --names \"root, front, back\" --prefix \"[{name}]\" --prefix-colors \"cyan.reset.bold,green.reset.bold,yellow.reset.bold\" \"npm run setup:root\" \"npm run setup:front\" \"npm run setup:back\""
     },
     "husky": {
         "hooks": {
@@ -64,6 +69,7 @@
     },
     "dependencies": {
         "as-a": "^1.3.1",
-        "concurrently": "^5.2.0"
+        "concurrently": "^3.5.1",
+        "rimraf": "^3.0.2"
     }
 }
