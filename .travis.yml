@@ -16,7 +16,7 @@ script:
 deploy:
     provider: heroku
     skip_cleanup: true
-  on:
+on:
     repo: kshitijk83/dash-gate
     branch: master
 env:
