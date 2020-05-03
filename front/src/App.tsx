@@ -1,8 +1,8 @@
 import React from 'react'
-import Demo from './components/Demo'
+import Routes from './routes'
 
 function App() {
-    return <Demo />
+    return <Routes />
 }
 
 export default App
