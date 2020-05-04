@@ -1,8 +1,15 @@
-import React from 'react'
-import Routes from './routes'
-
+import React from 'react';
+import Routes from './routes';
+import { TodoProvider } from './hooks/useStudentList';
+import MainLayout from './containers/MainLayout/MainLayout';
 function App() {
-    return <Routes />
+    return (
+        <TodoProvider>
+            <MainLayout>
+                <Routes />
+            </MainLayout>
+        </TodoProvider>
+    );
 }
 
-export default App
+export default App;

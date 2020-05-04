@@ -4,7 +4,7 @@
         "order-imports": false,
         "object-literal-sort-keys": false,
         "no-console": false,
-        "jsx-no-lamda": false,
+        "jsx-no-lambda": false,
         "member-ordering": false
     }
 }

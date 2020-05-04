@@ -1,8 +1,8 @@
-import React from 'react'
-import { RouteComponentProps } from '@reach/router'
+import React from 'react';
+import { RouteComponentProps } from '@reach/router';
 
 const StudentList = (props: RouteComponentProps) => {
-    return <div>StudentList</div>
-}
+    return <div>StudentList</div>;
+};
 
-export default StudentList
+export default StudentList;

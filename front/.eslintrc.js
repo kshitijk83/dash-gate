@@ -28,10 +28,11 @@ module.exports = {
         'no-console': 1, // warn
         'react-hooks/rules-of-hooks': 2,
         'react-hooks/exhaustive-deps': 1,
+        'no-unused-vars': 'off',
     },
     env: {
         es6: true,
         browser: true,
         node: true,
     },
-}
+};
