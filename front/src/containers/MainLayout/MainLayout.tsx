@@ -1,8 +1,17 @@
 import React, { useState, FC } from 'react';
 import { Link } from '@reach/router';
 import { Layout, Menu } from 'antd';
+import { css } from '@emotion/core';
 import * as appConstant from '../../constants/appConstant';
 import './MainLayout.css';
+
+const siderStyle = css`
+    overflow: auto;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    padding-top: 50px;
+`;
 
 const MainLayout: FC = (props) => {
     const [collapsed, setCollapsed] = useState(false);
@@ -24,13 +33,7 @@ const MainLayout: FC = (props) => {
         <Layout>
             <Sider
                 width="15%"
-                style={{
-                    overflow: 'auto',
-                    height: '100vh',
-                    position: 'fixed',
-                    left: 0,
-                    paddingTop: 50,
-                }}
+                css={siderStyle}
                 collapsible={true}
                 collapsed={collapsed}
                 onCollapse={toggle}
