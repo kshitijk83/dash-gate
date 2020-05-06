@@ -1,16 +1,22 @@
 import React, { useState, FC } from 'react';
-import { Link } from '@reach/router';
+import { navigate } from '@reach/router';
 import { Layout, Menu } from 'antd';
 import { css } from '@emotion/core';
 import * as appConstant from '../../constants/appConstant';
 import './MainLayout.css';
-
+// css for adjusting
 const siderStyle = css`
     overflow: auto;
     height: 100vh;
     position: fixed;
     left: 0;
     padding-top: 50px;
+`;
+
+const layoutContentStyle = css`
+    padding: 24px;
+    min-height: 360px;
+    overflow: auto;
 `;
 
 const MainLayout: FC = (props) => {
@@ -22,10 +28,12 @@ const MainLayout: FC = (props) => {
     }
 
     const menuItems = appConstant.navBar.map((item, i) => (
-        <Menu.Item key={i + 1} icon={<item.icon />}>
-            <Link style={{ color: 'inherit' }} to={item.to}>
-                {item.title}
-            </Link>
+        <Menu.Item
+            onClick={() => navigate(item.to)}
+            key={i + 1}
+            icon={<item.icon />}
+        >
+            {item.title}
         </Menu.Item>
     ));
 
@@ -44,17 +52,14 @@ const MainLayout: FC = (props) => {
                 </Menu>
             </Sider>
             <Layout style={{ marginLeft: '15%' }}>
-                <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
-                    <div
-                        className="site-layout-background"
-                        style={{
-                            padding: 24,
-                            minHeight: 360,
-                            overflow: 'auto',
-                        }}
-                    >
-                        {props.children}
-                    </div>
+                <Content
+                    style={{
+                        margin: '24px 16px 0',
+                        overflow: 'initial',
+                        backgroundColor: '#fff',
+                    }}
+                >
+                    <div css={layoutContentStyle}>{props.children}</div>
                 </Content>
             </Layout>
         </Layout>
