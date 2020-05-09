@@ -1,5 +1,5 @@
 import React, { FC, useReducer, Dispatch, useMemo } from 'react';
-
+import * as fakeData from '../utils/fakeData';
 enum ACTION_TYPES {
     ADD = 'ADD',
     UPDATE = 'UPDATE',
@@ -10,32 +10,7 @@ enum ACTION_TYPES {
 interface IAction {
     type: ACTION_TYPES;
 }
-
-type student = {
-    id: string;
-    name: string;
-    rollno: string;
-    gender: 'M' | 'F';
-    year: '1st' | '2nd' | '3rd' | '4th' | '5th';
-    hostel:
-        | 'UBH'
-        | 'DBH'
-        | 'Himadgri'
-        | 'Himgiri'
-        | 'KBH'
-        | 'NBH'
-        | 'PGH'
-        | 'AGH';
-};
-
-const studentObj: student = {
-    id: Math.random().toString(),
-    name: 'Kshitiz Kumar',
-    rollno: '17MI513',
-    gender: 'M',
-    year: '3rd',
-    hostel: 'UBH',
-};
+const studentsObj: student[] = fakeData.createStudents();
 type contextValue = [student[], Dispatch<IAction>];
 
 const StudentListContext = React.createContext<contextValue>([[], () => {}]);
@@ -57,7 +32,7 @@ function listReducer(prevState: student[], action: IAction) {
 }
 
 const TodoProvider: FC = (props) => {
-    const [state, dispatch] = useReducer(listReducer, [studentObj]);
+    const [state, dispatch] = useReducer(listReducer, studentsObj);
     const value: contextValue = useMemo(() => [state, dispatch], [state]);
     return <StudentListContext.Provider value={value} {...props} />;
 };
