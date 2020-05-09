@@ -6,6 +6,7 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'UBH',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
         name: 'Divyanshu Dhawan',
@@ -14,6 +15,7 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'KBH',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
         name: 'Shubham Thakur',
@@ -22,6 +24,7 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'UBH',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
         name: 'Shubham Chauhan',
@@ -30,6 +33,7 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'Himadgri',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
         name: 'Amandeep Pooni',
@@ -38,6 +42,7 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'Himgiri',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
         name: 'Diksha Rana',
@@ -46,6 +51,7 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'AGH',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
         name: 'Vineet Sharma',
@@ -54,6 +60,7 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'DBH',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
         name: 'Tanvi Mahajan',
@@ -62,6 +69,7 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'AGH',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
         name: 'Shivam Kapila',
@@ -70,6 +78,7 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'NBH',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
         name: 'Shivam Sood',
@@ -78,6 +87,7 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'UBH',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
         name: 'Harsh Sharma',
@@ -86,6 +96,7 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'UBH',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
         name: 'Astha',
@@ -94,6 +105,7 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'AGH',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
         name: 'Ritika Verma',
@@ -102,6 +114,7 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'AGH',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
         name: 'Debo',
@@ -110,6 +123,7 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'Himgiri',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
         name: 'Sahaj Kulshrestha',
@@ -118,6 +132,7 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'Himgiri',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
         name: 'Ankit Sharma',
@@ -126,6 +141,7 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'DBH',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
         name: 'Vinay Sharma',
@@ -134,6 +150,7 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'DBH',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
         name: 'Mayank Sharma',
@@ -142,5 +159,6 @@ export const students: student[] = [
         year: '3rd',
         hostel: 'NBH',
         id: Math.random().toString(),
+        out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
 ];

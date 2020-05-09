@@ -13,4 +13,5 @@ type student = {
         | 'NBH'
         | 'PGH'
         | 'AGH';
+    out_of_campus: boolean;
 };

@@ -10,7 +10,7 @@ enum ACTION_TYPES {
 interface IAction {
     type: ACTION_TYPES;
 }
-const studentsObj: student[] = fakeData.createStudents();
+const studentsObj: student[] = fakeData.createStudents(30);
 type contextValue = [student[], Dispatch<IAction>];
 
 const StudentListContext = React.createContext<contextValue>([[], () => {}]);
