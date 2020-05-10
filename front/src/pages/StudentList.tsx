@@ -49,7 +49,17 @@ const StudentList = (props: RouteComponentProps) => {
         ...student,
     }));
 
-    return <Table columns={columns} dataSource={dataSource} />;
+    return (
+        <Table
+            pagination={{
+                position: ['bottomCenter', 'bottomCenter'],
+                defaultCurrent: 2,
+                defaultPageSize: 12,
+            }}
+            columns={columns}
+            dataSource={dataSource}
+        />
+    );
 };
 
 export default StudentList;
