@@ -1,11 +1,15 @@
 import React from 'react';
 import StudentList from './pages/StudentList';
-import { Router } from '@reach/router';
+import { Router, Redirect } from '@reach/router';
+import MainLayout from './containers/MainLayout/MainLayout';
 
 const Routes = () => {
     return (
         <Router>
-            <StudentList path="/" />
+            <MainLayout path="/">
+                <StudentList path="/student" />
+                <Redirect from="/" to="/student" />
+            </MainLayout>
         </Router>
     );
 };

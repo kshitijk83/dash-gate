@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Table, Tag } from 'antd';
 import { RouteComponentProps } from '@reach/router';
 import { useStudentList } from '../hooks/useStudentList';
@@ -42,7 +42,7 @@ const columns = [
     },
 ];
 
-const StudentList = (props: RouteComponentProps) => {
+const StudentList: FC<RouteComponentProps> = (props) => {
     const { state } = useStudentList();
     const dataSource = state.map((student) => ({
         key: student.id,
@@ -53,7 +53,7 @@ const StudentList = (props: RouteComponentProps) => {
         <Table
             pagination={{
                 position: ['bottomCenter', 'bottomCenter'],
-                defaultCurrent: 2,
+                defaultCurrent: 1,
                 defaultPageSize: 12,
             }}
             columns={columns}

@@ -1,10 +1,11 @@
 import React, { useState, FC } from 'react';
-import { navigate } from '@reach/router';
+import { navigate, RouteComponentProps } from '@reach/router';
 import { Layout, Menu } from 'antd';
 import { css } from '@emotion/core';
 import * as appConstant from '../../constants/appConstant';
 import './MainLayout.css';
 import SubMenu from 'antd/lib/menu/SubMenu';
+// const
 // css for adjusting
 const siderStyle = css`
     overflow: auto;
@@ -19,8 +20,8 @@ const layoutContentStyle = css`
     min-height: 360px;
     overflow: auto;
 `;
-
-const MainLayout: FC = (props) => {
+const SIDER_WIDTH = '280px';
+const MainLayout: FC<RouteComponentProps> = (props) => {
     const [collapsed, setCollapsed] = useState(false);
     const { Sider, Content } = Layout;
 
@@ -62,7 +63,7 @@ const MainLayout: FC = (props) => {
     return (
         <Layout>
             <Sider
-                width="15%"
+                width={SIDER_WIDTH}
                 css={siderStyle}
                 collapsible={true}
                 collapsed={collapsed}
@@ -73,7 +74,7 @@ const MainLayout: FC = (props) => {
                     {menuItems}
                 </Menu>
             </Sider>
-            <Layout style={{ marginLeft: '15%' }}>
+            <Layout style={{ marginLeft: SIDER_WIDTH }}>
                 <Content
                     style={{
                         margin: '24px 16px 0',

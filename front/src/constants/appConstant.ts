@@ -10,7 +10,7 @@ export const navBar = [
         submenu: [
             {
                 title: 'All',
-                to: '/',
+                to: '/student',
             },
             {
                 title: 'Out of Campus',
