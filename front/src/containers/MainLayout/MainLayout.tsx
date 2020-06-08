@@ -5,7 +5,9 @@ import { css } from '@emotion/core';
 import * as appConstant from '../../constants/appConstant';
 import './MainLayout.css';
 import SubMenu from 'antd/lib/menu/SubMenu';
-// const
+
+const SIDER_WIDTH = '280px';
+
 // css for adjusting
 const siderStyle = css`
     overflow: auto;
@@ -20,7 +22,12 @@ const layoutContentStyle = css`
     min-height: 360px;
     overflow: auto;
 `;
-const SIDER_WIDTH = '280px';
+
+const layoutStyle = css`
+    margin-left: ${SIDER_WIDTH};
+    width: 100vh;
+`;
+
 const MainLayout: FC<RouteComponentProps> = (props) => {
     const [collapsed, setCollapsed] = useState(false);
     const { Sider, Content } = Layout;
@@ -74,7 +81,7 @@ const MainLayout: FC<RouteComponentProps> = (props) => {
                     {menuItems}
                 </Menu>
             </Sider>
-            <Layout style={{ marginLeft: SIDER_WIDTH }}>
+            <Layout css={layoutStyle}>
                 <Content
                     style={{
                         margin: '24px 16px 0',

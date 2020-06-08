@@ -3,6 +3,7 @@ import {
     VideoCameraOutlined,
     UploadOutlined,
 } from '@ant-design/icons';
+import * as routeConstants from '../constants/routeConstant';
 
 export const navBar = [
     {
@@ -10,20 +11,24 @@ export const navBar = [
         submenu: [
             {
                 title: 'All',
-                to: '/student',
+                to: routeConstants.STUDENT_LIST,
             },
             {
                 title: 'Out of Campus',
-                to: '/out',
+                to: routeConstants.OUT_OF_CAMPUS,
             },
             {
                 title: 'In Campus',
-                to: '/in',
+                to: routeConstants.IN_CAMPUS,
             },
         ],
         icon: UserOutlined,
     },
-    { title: 'Add New User', to: '/add', icon: VideoCameraOutlined },
+    {
+        title: 'Add New Entry',
+        to: routeConstants.ADD_ENTRY,
+        icon: VideoCameraOutlined,
+    },
     { title: 'Navbar 3', to: '/something', icon: UploadOutlined },
     { title: 'Navbar 4', to: '/something', icon: UserOutlined },
     { title: 'Navbar 5', to: '/something', icon: UserOutlined },
