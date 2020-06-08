@@ -1,6 +1,6 @@
 import React from 'react';
 import StudentList from './pages/StudentList';
-import { Router, Redirect } from '@reach/router';
+import { Router } from '@reach/router';
 import MainLayout from './containers/MainLayout/MainLayout';
 import AddNewEntry from './pages/AddNewEntry';
 import * as routeConstants from './constants/routeConstant';
