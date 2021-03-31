@@ -10,8 +10,11 @@
   "author": "kshitij kumar",
   "license": "MIT",
   "dependencies": {
+    "@types/mongoose": "^5.10.4",
+    "connect-mongodb-session": "^2.4.1",
     "cross-env": "^7.0.2",
     "express": "^4.17.1",
+    "mongoose": "^5.12.2",
     "nodemon": "^2.0.3"
   }
 }
