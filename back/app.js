@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const studentRoutes = require('./routes/student');
 
@@ -7,6 +8,7 @@ const DATABASE_URI = 'mongodb+srv://kshitijk83:451422ere@paracticing.bfzmz.mongo
 
 const app = express();
 
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

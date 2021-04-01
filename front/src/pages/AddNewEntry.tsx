@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { RouteComponentProps } from '@reach/router';
 import {
     Row,
@@ -13,6 +13,8 @@ import {
 } from 'antd';
 import { css } from '@emotion/core';
 
+import axios from '../api/instance';
+import { useHttp } from '../hooks/useHttp';
 const layout = {
     labelCol: { span: 3 },
     wrapperCol: { span: 16 },
@@ -38,10 +40,22 @@ const center = css`
 `;
 
 const AddNewEntry: React.FC<RouteComponentProps> = (props) => {
-    const onFinish = (values: any) => {
-        // eslint-disable-next-line
-        console.log(values);
+    const { sendRequest, state: httpState} =useHttp();
+    const onFinish = async(values: any) => {
+        // const data = await axios.post('/student/create', values);
+        sendRequest({
+            url: '/student/create',
+            data: values,
+            method: 'POST',
+            identifier:'studentCreate',
+        })
+        // console.log(data);
     };
+
+    useEffect(() => {
+        // console.log(httpState);
+        // eslint-disable-next-line
+    }, [httpState.successMessage]);
 
     return (
         <>
@@ -50,8 +64,8 @@ const AddNewEntry: React.FC<RouteComponentProps> = (props) => {
             </Typography.Title>
             <Divider />
             <Row>
-                <Col span={4}>{null} </Col>
-                <Col style={{ marginTop: 100 }} span={16}>
+                <Col span={2}>{null} </Col>
+                <Col style={{ marginTop: 100 }} span={22}>
                     <Form
                         {...layout}
                         name="nest-messages"
@@ -123,8 +137,8 @@ const AddNewEntry: React.FC<RouteComponentProps> = (props) => {
                             rules={[{ required: true }]}
                         >
                             <Select>
-                                <Select.Option value="out"> yes</Select.Option>
-                                <Select.Option value="in">No</Select.Option>
+                                <Select.Option value="T"> yes</Select.Option>
+                                <Select.Option value="F">No</Select.Option>
                             </Select>
                         </Form.Item>
                         <Form.Item
@@ -143,7 +157,7 @@ const AddNewEntry: React.FC<RouteComponentProps> = (props) => {
                         </Form.Item>
                     </Form>
                 </Col>
-                <Col span={4}>{null}</Col>
+                <Col span={2}>{null}</Col>
             </Row>
         </>
     );

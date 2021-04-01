@@ -1,15 +1,17 @@
+const student = require('../models/student');
 const Student = require('../models/student');
 
 exports.postCreate = async (req, res, next) => {
     const studentObj = req.body;
     const student = Student({
-        ...studentObj
+        ...studentObj,
+        out_of_campus: studentObj.out_of_campus=='T'?true:false
     });
     try {
         const data = await student.save();
         res.status(200).json({
             data,
-            msg: 'Student info submitted'
+            message: 'Student info submitted'
         })
     } catch (err) {
         if (!err.statusCode) {
@@ -31,7 +33,7 @@ exports.deleteStudent = async (req, res, next) => {
         const data = await Student.findByIdAndDelete(id);
         res.status(200).json({
             data,
-            msg: 'Student deleted!!'
+            message: 'Student deleted!!'
         })
     } catch (err) {
         if (!err.statusCode) {
