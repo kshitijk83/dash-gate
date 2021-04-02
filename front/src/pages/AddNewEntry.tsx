@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import {
     Row,
@@ -13,7 +13,6 @@ import {
 } from 'antd';
 import { css } from '@emotion/core';
 
-import axios from '../api/instance';
 import { useHttp } from '../hooks/useHttp';
 const layout = {
     labelCol: { span: 3 },
@@ -40,15 +39,15 @@ const center = css`
 `;
 
 const AddNewEntry: React.FC<RouteComponentProps> = (props) => {
-    const { sendRequest, state: httpState} =useHttp();
-    const onFinish = async(values: any) => {
+    const { sendRequest, state: httpState } = useHttp();
+    const onFinish = async (values: any) => {
         // const data = await axios.post('/student/create', values);
         sendRequest({
             url: '/student/create',
             data: values,
             method: 'POST',
-            identifier:'studentCreate',
-        })
+            identifier: 'studentCreate',
+        });
         // console.log(data);
     };
 

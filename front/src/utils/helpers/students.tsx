@@ -5,7 +5,7 @@ export const students: student[] = [
         rollno: '17MI513',
         year: '3rd',
         hostel: 'UBH',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
@@ -14,7 +14,7 @@ export const students: student[] = [
         rollno: '17MI547',
         year: '3rd',
         hostel: 'KBH',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
@@ -23,7 +23,7 @@ export const students: student[] = [
         rollno: '17MI324',
         year: '3rd',
         hostel: 'UBH',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
@@ -32,7 +32,7 @@ export const students: student[] = [
         rollno: '17MI234',
         year: '3rd',
         hostel: 'Himadgri',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
@@ -41,7 +41,7 @@ export const students: student[] = [
         rollno: '17MI544',
         year: '3rd',
         hostel: 'Himgiri',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
@@ -50,7 +50,7 @@ export const students: student[] = [
         rollno: '17mi555',
         year: '3rd',
         hostel: 'AGH',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
@@ -59,7 +59,7 @@ export const students: student[] = [
         rollno: '17MI514',
         year: '3rd',
         hostel: 'DBH',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
@@ -68,7 +68,7 @@ export const students: student[] = [
         rollno: '17mi555',
         year: '3rd',
         hostel: 'AGH',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
@@ -77,7 +77,7 @@ export const students: student[] = [
         rollno: '17MI517',
         year: '3rd',
         hostel: 'NBH',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
@@ -86,7 +86,7 @@ export const students: student[] = [
         rollno: '17MI519',
         year: '3rd',
         hostel: 'UBH',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
@@ -95,7 +95,7 @@ export const students: student[] = [
         rollno: '17MI511',
         year: '3rd',
         hostel: 'UBH',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
@@ -104,7 +104,7 @@ export const students: student[] = [
         rollno: '17mi555',
         year: '3rd',
         hostel: 'AGH',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
@@ -113,7 +113,7 @@ export const students: student[] = [
         rollno: '17mi555',
         year: '3rd',
         hostel: 'AGH',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
@@ -122,7 +122,7 @@ export const students: student[] = [
         rollno: '17MI510',
         year: '3rd',
         hostel: 'Himgiri',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
@@ -131,7 +131,7 @@ export const students: student[] = [
         rollno: '17MI510',
         year: '3rd',
         hostel: 'Himgiri',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
@@ -140,7 +140,7 @@ export const students: student[] = [
         rollno: '17MI413',
         year: '3rd',
         hostel: 'DBH',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
@@ -149,7 +149,7 @@ export const students: student[] = [
         rollno: '17MI613',
         year: '3rd',
         hostel: 'DBH',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
     {
@@ -158,7 +158,7 @@ export const students: student[] = [
         rollno: '17MI113',
         year: '3rd',
         hostel: 'NBH',
-        id: Math.random().toString(),
+        _id: Math.random().toString(),
         out_of_campus: Math.floor(Math.random() * 2) % 2 === 1 ? true : false,
     },
 ];

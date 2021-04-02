@@ -1,5 +1,5 @@
 type student = {
-    id: string;
+    _id: string;
     name: string;
     rollno: string;
     gender: 'M' | 'F';

@@ -22,11 +22,11 @@ type httpstate = {
 };
 
 enum HTTP_ACTION_TYPES {
-    SENDING= 'SENDING',
-    RESPONSE= 'RESPONSE',
-    ERROR= 'ERROR',
-    CLEAR= 'CLEAR',
-};
+    SENDING = 'SENDING',
+    RESPONSE = 'RESPONSE',
+    ERROR = 'ERROR',
+    CLEAR = 'CLEAR',
+}
 
 interface IAction {
     type: HTTP_ACTION_TYPES;
@@ -40,9 +40,9 @@ interface IAction {
 type contextValue = [httpstate, Dispatch<IAction>];
 const HttpCtx = React.createContext<contextValue>([initState, () => {}]);
 
-const HttpProvider:FC = (props) => {
+const HttpProvider: FC = (props) => {
     const [state, dispatch] = useReducer(httpReducer, initState);
-    const value:contextValue = useMemo(() => [state, dispatch], [state]);
+    const value: contextValue = useMemo(() => [state, dispatch], [state]);
     // eslint-disable-next-line
     return <HttpCtx.Provider value={value} {...props} />;
 };

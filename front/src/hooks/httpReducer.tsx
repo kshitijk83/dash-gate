@@ -9,7 +9,7 @@ type state = {
     identifier: string;
 };
 
-const httpReducer = (curState: any, action: any ) => {
+const httpReducer = (curState: any, action: any) => {
     switch (action.type) {
         case HTTP_ACTION_TYPES.SENDING:
             return {

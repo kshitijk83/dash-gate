@@ -1,7 +1,8 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { Table, Tag } from 'antd';
 import { RouteComponentProps } from '@reach/router';
 import { useStudentList } from '../hooks/useStudentList';
+import { useHttp } from '../hooks/useHttp';
 
 const columns = [
     {
@@ -43,12 +44,26 @@ const columns = [
 ];
 
 const StudentList: FC<RouteComponentProps> = (props) => {
-    const { state } = useStudentList();
-    const dataSource = state.map((student) => ({
-        key: student.id,
-        ...student,
-    }));
+    const { state, set } = useStudentList();
+    const {sendRequest,state:httpState }=useHttp();
+    const dataSource = state&&state.map((student) => ({
+            key: student._id,
+            ...student,
+        }));
 
+    useEffect(() => {
+        sendRequest({
+            url: 'student/all',
+            method: 'GET',
+            identifier: 'all'
+        })
+    }, []);
+
+    useEffect(() => {
+        // console.log(httpState);
+        set(httpState.data)
+
+    }, [httpState.successMessage]);
     return (
         <Table
             pagination={{
