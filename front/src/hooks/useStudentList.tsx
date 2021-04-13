@@ -5,7 +5,7 @@ enum ACTION_TYPES {
     UPDATE = 'UPDATE',
     DELETE = 'DELETE',
     CLEAR = 'CLEAR',
-    SET='SET'
+    SET = 'SET',
 }
 
 interface IAction {
@@ -23,7 +23,7 @@ function listReducer(prevState: student[], action: IAction) {
         case ACTION_TYPES.SET:
             return action.data;
         case ACTION_TYPES.ADD:
-            return [action.data,...prevState];
+            return [action.data, ...prevState];
         case ACTION_TYPES.UPDATE:
             return prevState;
         case ACTION_TYPES.DELETE:
@@ -48,9 +48,9 @@ const useStudentList = () => {
     }
     const [state, dispatch] = context;
 
-    const set = (data:student[]) => {
-        dispatch({type:ACTION_TYPES.SET,data})
-    }
+    const set = (data: student[]) => {
+        dispatch({ type: ACTION_TYPES.SET, data });
+    };
     return { state, dispatch, set };
 };
 

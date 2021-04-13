@@ -45,8 +45,10 @@ const columns = [
 
 const StudentList: FC<RouteComponentProps> = (props) => {
     const { state, set } = useStudentList();
-    const {sendRequest,state:httpState }=useHttp();
-    const dataSource = state&&state.map((student) => ({
+    const { sendRequest, state: httpState } = useHttp();
+    const dataSource =
+        state &&
+        state.map((student) => ({
             key: student._id,
             ...student,
         }));
@@ -55,14 +57,13 @@ const StudentList: FC<RouteComponentProps> = (props) => {
         sendRequest({
             url: 'student/all',
             method: 'GET',
-            identifier: 'all'
-        })
+            identifier: 'all',
+        });
     }, []);
 
     useEffect(() => {
         // console.log(httpState);
-        set(httpState.data)
-
+        set(httpState.data);
     }, [httpState.successMessage]);
     return (
         <Table
